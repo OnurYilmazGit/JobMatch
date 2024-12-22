@@ -9,6 +9,10 @@ from typing import List
 import requests
 import json
 from pdfminer.high_level import extract_text
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Initialize FastAPI app
 app = FastAPI()
@@ -26,12 +30,12 @@ os.makedirs(JOBS_DIR, exist_ok=True)
 jobs_data = []
 cv_data = {}
 
-# Lightcast API credentials
-CLIENT_ID = "vxut6285xxdeqq7j"
-CLIENT_SECRET = "W9UD9gup"
-SCOPE = "emsi_open"
-TOKEN_URL = "https://auth.emsicloud.com/connect/token"
-SKILLS_URL = "https://emsiservices.com/skills/versions/latest/extract"
+# Lightcast API credentials from environment variables
+CLIENT_ID = os.getenv("CLIENT_ID")
+CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+SCOPE = os.getenv("SCOPE")
+TOKEN_URL = os.getenv("TOKEN_URL")
+SKILLS_URL = os.getenv("SKILLS_URL")
 
 # Global cache dictionary for token pooling
 token_pool = []
