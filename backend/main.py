@@ -10,12 +10,22 @@ import requests
 import json
 from pdfminer.high_level import extract_text
 from dotenv import load_dotenv
+from fastapi.middleware.cors import CORSMiddleware
 
 # Load environment variables from .env file
 load_dotenv()
 
 # Initialize FastAPI app
 app = FastAPI()
+
+# Add CORS middleware after creating the FastAPI app
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],  # Allow requests from the Next.js dev server
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Default paths
 BASE_DIR = "data"
@@ -179,6 +189,6 @@ async def match_jobs():
 
 # Run the app for testing
 if __name__ == "__main__":
-    populate_tokens(pool_size=5)  # Generate a pool of 5 tokens
+    populate_tokens(pool_size=3)  # Generate a pool of 5 tokens
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
