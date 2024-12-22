@@ -124,6 +124,26 @@ class JobMatch(BaseModel):
     matchScore: int
     matchedSkills: List[str]
     missingSkills: List[str]
+    url: str
+    postedAt: str
+    description: str
+
+# Function to get a new access token
+def get_access_token():
+    payload = {
+        "client_id": CLIENT_ID,
+        "client_secret": CLIENT_SECRET,
+        "grant_type": "client_credentials",
+        "scope": SCOPE
+    }
+    headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+    response = requests.post(TOKEN_URL, data=payload, headers=headers)
+
+    if response.ok:
+        return response.json().get("access_token", "")
+    else:
+        logging.error("Failed to generate token")
+        return None
 
 @app.post("/upload-jobs/")
 async def upload_jobs():
@@ -172,12 +192,18 @@ async def match_jobs():
         missing_skills = set(job_skills) - matched_skills
         match_score = int(jaccard_similarity(set(job_skills), set(cv_data["skills"])) * 100)
 
+        # Determine the correct URL to use
+        job_url = job.get("externalApplyLink") or job.get("url")
+
         results.append(JobMatch(
             positionName=job["positionName"],
             company=job["company"],
             matchScore=match_score,
             matchedSkills=list(matched_skills),
-            missingSkills=list(missing_skills)
+            missingSkills=list(missing_skills),
+            url=job_url,
+            postedAt=job["postedAt"],
+            description=job["description"]
         ))
 
     results.sort(key=lambda x: x.matchScore, reverse=True)
@@ -189,6 +215,6 @@ async def match_jobs():
 
 # Run the app for testing
 if __name__ == "__main__":
-    populate_tokens(pool_size=3)  # Generate a pool of 5 tokens
+    populate_tokens(pool_size=2)  # Generate a pool of 5 tokens
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
