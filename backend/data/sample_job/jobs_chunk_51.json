@@ -1,0 +1,697 @@
+[
+    {
+        "job_title": "Robotics Test Engineer",
+        "job_id": "1009526149399",
+        "job_normalized_title": "software development engineer in test",
+        "job_url": "https://www.glassdoor.com/partner/jobListing.htm?pos=101&ao=1136043&s=58&guid=0000019427e1dee0bda15f406c755030&src=GD_JOB_AD&t=NS&vt=w&cs=1_202d44b5&cb=1735835901805&jobListingId=1009526149399",
+        "job_location": {
+            "unknown": "München",
+            "city": "münchen",
+            "country": "germany",
+            "zip": null
+        },
+        "job_description": "Intrinsic is Alphabet's bet aiming to reimagine the potential of industrial robotics. Our team believes that advances in AI, perception and simulation will redefine what's possible for industrial robotics in the near future – with software and data at the core.\n\nOur mission is to make industrial robotics intelligent, accessible, and usable for millions more businesses, entrepreneurs, and developers. We are a dynamic team of engineers, roboticists, designers, and technologists who are passionate about unlocking the creative and economic potential of industrial robotics.\n\n\nROLE\n\nThe Release Engineering & Quality Assurance team is responsible for delivering releases of Intrinsic's software platform at high velocity without sacrificing trust in the quality of each release. As a Test Engineer on this team, your job will be to execute and review the tests which demonstrate this quality. When a test cannot be completed, you will document detailed steps for reproducing the error and work with the engineering team to verify that the issue has been resolved. In order to scale our efforts as our scope grows, you will also use your software development experience and the knowledge that you gain of Intrinsic's software to convert manual tests to automated tests.\n\n\nHOW YOUR WORK MOVES THE MISSION FORWARD\n\n * Perform manual tests of Intrinsic software, both in simulation and on real hardware robotics workcells.\n * Investigate and document failures and assist the engineering team with verifying fixes.\n * Develop manual test plans into automated tests in order to scale our quality engineering processes.\n * Support the release engineering team in delivering high quality software releases.\n\n\nSKILLS YOU WILL NEED TO BE SUCCESSFUL\n\n * 4-year degree in Computer Science, Robotics, Electrical Engineering, Mechanical Engineering, or equivalent experience.\n * Excellent written communication skills and attention to detail. You will need to concisely describe deviations from expected behavior and provide accurate steps to reproduce errors that you find when running tests.\n * Programming experience with Linux shell scripting, Python, or Go.\n * Experience working with mobile robots or industrial robots in a lab or production environment.\n\n\nSKILLS THAT WILL DIFFERENTIATE YOUR CANDIDACY\n\n * Experience administering industrial robots in a lab or production environment.\n * Experience with Cypress.io, Beautiful Soup, or similar browser automation and scraping tools.\n * Technical writing and/or presentation experience. Have you published any projects with really good documentation?\n * Experience working with software build systems such as Bazel or CMake.\n\n\n\n\nAt Intrinsic, we don't just accept difference - we celebrate it, we support it, and we thrive on it for the benefit of our employees, our products and our community. We are proud to be an equal opportunity workplace and an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements.\n\nIf you have a disability or special need that requires accommodation, please contact us at: candidate-support@intrinsic.ai.",
+        "job_description_html": "<div><div><p>Intrinsic is Alphabet's bet aiming to reimagine the potential of industrial robotics. Our team believes that advances in AI, perception and simulation will redefine what's possible for industrial robotics in the near future &ndash; with software and data at the core.</p>\n<p>\nOur mission is to make industrial robotics intelligent, accessible, and usable for millions more businesses, entrepreneurs, and developers. We are a dynamic team of engineers, roboticists, designers, and technologists who are passionate about unlocking the creative and economic potential of industrial robotics.</p></div><h2 class=\"jobSectionHeader\"><b>\nRole</b></h2>\n<p>\nThe Release Engineering &amp; Quality Assurance team is responsible for delivering releases of Intrinsic's software platform at high velocity without sacrificing trust in the quality of each release. As a Test Engineer on this team, your job will be to execute and review the tests which demonstrate this quality. When a test cannot be completed, you will document detailed steps for reproducing the error and work with the engineering team to verify that the issue has been resolved. In order to scale our efforts as our scope grows, you will also use your software development experience and the knowledge that you gain of Intrinsic's software to convert manual tests to automated tests.</p>\n<h2 class=\"jobSectionHeader\"><b>\nHow your work moves the mission forward</b></h2>\n<ul><li>Perform manual tests of Intrinsic software, both in simulation and on real hardware robotics workcells.</li>\n<li>Investigate and document failures and assist the engineering team with verifying fixes.</li>\n<li>Develop manual test plans into automated tests in order to scale our quality engineering processes.</li>\n<li>Support the release engineering team in delivering high quality software releases.</li>\n</ul><h2 class=\"jobSectionHeader\"><b>Skills you will need to be successful</b></h2>\n<ul><li>4-year degree in Computer Science, Robotics, Electrical Engineering, Mechanical Engineering, or equivalent experience.</li>\n<li>Excellent written communication skills and attention to detail. You will need to concisely describe deviations from expected behavior and provide accurate steps to reproduce errors that you find when running tests.</li>\n<li>Programming experience with Linux shell scripting, Python, or Go.</li>\n<li>Experience working with mobile robots or industrial robots in a lab or production environment.</li>\n</ul><h2 class=\"jobSectionHeader\"><b>Skills that will differentiate your candidacy</b></h2>\n<ul><li>Experience administering industrial robots in a lab or production environment.</li>\n<li>Experience with Cypress.io, Beautiful Soup, or similar browser automation and scraping tools.</li>\n<li>Technical writing and/or presentation experience. Have you published any projects with really good documentation?</li>\n<li>Experience working with software build systems such as Bazel or CMake.</li></ul><p></p><div><p><br>\nAt Intrinsic, we don't just accept difference - we celebrate it, we support it, and we thrive on it for the benefit of our employees, our products and our community. We are proud to be an equal opportunity workplace and an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements.</p>\n<p>\nIf you have a disability or special need that requires accommodation, please contact us at: candidate-support@intrinsic.ai.</p></div></div>",
+        "job_posted_date": "2024-12-13T00:00:00",
+        "job_remote": null,
+        "job_salary": {
+            "currency": "EUR",
+            "currency_symbol": "€",
+            "pay_period": "hourly",
+            "estimated": false
+        },
+        "job_candidate_numbers": null,
+        "job_job_types": [],
+        "job_levels": null,
+        "job_benefits_tags": [],
+        "job_shifts_and_schedule_tags": null,
+        "job_sponsored": false,
+        "job_industry": "Unternehmenssoftware & Netzwerklösungen",
+        "job_language": null,
+        "job_poster_first_name": null,
+        "job_poster_last_name": null,
+        "job_poster_linkedin_profile_url": null,
+        "company_uri_providers": [],
+        "company_name": "Intrinsic Innovation LLC",
+        "company_short_name": "Intrinsic",
+        "company_logo": "https://media.glassdoor.com/sql/5706716/intrinsic-innovation-squareLogo-1627925356943.png",
+        "company_headquarters_location": {
+            "city": "mountain view",
+            "unknown": "Mountain View, Vereinigte Staaten von Amerika"
+        },
+        "company_sizes_str": "201 bis 500 Mitarbeiter",
+        "company_size": null,
+        "company_website": "https://intrinsic.ai/careers/",
+        "company_revenue": "Unbekannt/Nicht zutreffend",
+        "company_url": "https://glassdoor.com/Überblick/Arbeit-bei-Intrinsic-EI_IE5706716.11,20.htm",
+        "company_description": null,
+        "company_foundation_date": "2021-01-01T00:00:00.000Z",
+        "company_tag_line": null,
+        "company_linkedin_follower_count": null,
+        "company_industries": null,
+        "company_locations": null,
+        "all": {
+            "__typename": "JobView",
+            "employerAttributes": {
+                "__typename": "EmployerAttributesHolder",
+                "attributes": []
+            },
+            "employerBenefits": {
+                "__typename": "FederatedBenefitsHolder",
+                "benefitReviews": [],
+                "benefitsOverview": {
+                    "__typename": "BenefitsOverviewVO",
+                    "benefitsHighlights": [],
+                    "employerBenefitSummary": null,
+                    "overallBenefitRating": 0
+                },
+                "numReviews": 3
+            },
+            "employerContent": null,
+            "employerReviewSummary": {
+                "__typename": "EmployerReviewSummaryHolder",
+                "reviewSummary": {
+                    "__typename": "ReviewsSummaryResponse",
+                    "highlightSummary": [
+                        {
+                            "__typename": "HighlightSummary",
+                            "categoryReviewCount": 2,
+                            "sentence": "good tech stack, good colleagues, excellent benefits",
+                            "sentiment": "POSITIVE"
+                        },
+                        {
+                            "__typename": "HighlightSummary",
+                            "categoryReviewCount": 2,
+                            "sentence": "Startup culture, free to explore ideas, tools, propose processes etc.",
+                            "sentiment": "POSITIVE"
+                        },
+                        {
+                            "__typename": "HighlightSummary",
+                            "categoryReviewCount": 1,
+                            "sentence": "Especially the employees from the Vicarious acquisition were treated very bad with very low pay.",
+                            "sentiment": "NEGATIVE"
+                        },
+                        {
+                            "__typename": "HighlightSummary",
+                            "categoryReviewCount": 1,
+                            "sentence": "Leadership has a god complex.",
+                            "sentiment": "NEGATIVE"
+                        }
+                    ]
+                }
+            },
+            "gaTrackerData": {
+                "__typename": "GATrackerData",
+                "isSponsoredFromIndeed": false,
+                "isSponsoredFromJobListingHit": false,
+                "jobViewDisplayTimeMillis": 0,
+                "pageRequestGuid": "0000019427e1dee0bda15f406c755030",
+                "requiresTracking": false,
+                "searchTypeCode": "NS",
+                "trackingUrl": null
+            },
+            "header": {
+                "__typename": "JobViewHeader",
+                "adOrderId": 1136043,
+                "adOrderSponsorshipLevel": "Organic",
+                "advertiserType": "GENERAL",
+                "ageInDays": 50,
+                "applicationId": 0,
+                "appliedDate": null,
+                "applyButtonDisabled": false,
+                "applyUrl": "/partner/jobListing.htm?pos=101&ao=1136043&s=58&guid=0000019427e1dee0bda15f406c755030&src=GD_JOB_VIEW&t=NS&vt=w&cs=1_90c379a2&cb=1735835901805&jobListingId=1009526149399&jrtk=5-yul1-3-1igju3noeljf2801",
+                "blur": true,
+                "categoryMgocId": 10132,
+                "coverPhoto": {
+                    "__typename": "CoverPhoto",
+                    "url": null
+                },
+                "divisionEmployerName": null,
+                "easyApply": false,
+                "easyApplyMethod": "NONE",
+                "employer": {
+                    "__typename": "Employer",
+                    "activeStatus": "ACTIVE",
+                    "bestProfile": {
+                        "__typename": "EmployerProfile",
+                        "id": 7571099
+                    },
+                    "id": 5706716,
+                    "name": "Intrinsic Innovation LLC",
+                    "shortName": "Intrinsic",
+                    "size": "201 bis 500 Mitarbeiter",
+                    "squareLogoUrl": "https://media.glassdoor.com/sql/5706716/intrinsic-innovation-squareLogo-1627925356943.png"
+                },
+                "employerNameFromSearch": "Intrinsic",
+                "expired": false,
+                "goc": "software-testingenieur (m/w/d)",
+                "hideCEOInfo": false,
+                "indeedApplyMetadata": null,
+                "indeedJobAttribute": {
+                    "__typename": "IndeedJobAttribute",
+                    "education": [],
+                    "educationLabel": [],
+                    "skills": [
+                        "6ETQT",
+                        "DRW3U",
+                        "MWTB7",
+                        "PAGS7",
+                        "PDQ4Y",
+                        "RY9MK",
+                        "X62BT",
+                        "XKFFF"
+                    ],
+                    "skillsLabel": [
+                        "Go",
+                        "Electrical engineering",
+                        "Scripting",
+                        "Software development",
+                        "Technical writing",
+                        "Linux",
+                        "Python",
+                        "Shell Scripting"
+                    ],
+                    "yearsOfExperienceLabel": []
+                },
+                "isIndexableJobViewPage": false,
+                "jobCountryId": 96,
+                "jobLink": "/partner/jobListing.htm?pos=101&ao=1136043&s=58&guid=0000019427e1dee0bda15f406c755030&src=GD_JOB_AD&t=NS&vt=w&cs=1_202d44b5&cb=1735835901805&jobListingId=1009526149399",
+                "jobResultTrackingKey": "5-yul1-3-1igju3noeljf2801",
+                "jobTitleText": "Robotics Test Engineer",
+                "jobType": null,
+                "jobTypeKeys": null,
+                "locId": 4990924,
+                "locationName": "München",
+                "locationType": "C",
+                "needsCommission": false,
+                "normalizedJobTitle": "software development engineer in test",
+                "organic": true,
+                "payCurrency": "EUR",
+                "payPeriod": null,
+                "payPeriodAdjustedPay": null,
+                "rating": 4.5,
+                "remoteWorkTypes": null,
+                "salarySource": null,
+                "savedJobId": 0,
+                "seoJobLink": "https://www.glassdoor.de/job-listing/robotics-test-engineer-intrinsic-JV_IC4990924_KO0,22_KE23,32.htm?jl=1009526149399",
+                "sgocId": 1007,
+                "sponsored": false,
+                "urgencySignal": null
+            },
+            "job": {
+                "__typename": "JobDetails",
+                "description": "<div><div><p>Intrinsic is Alphabet's bet aiming to reimagine the potential of industrial robotics. Our team believes that advances in AI, perception and simulation will redefine what's possible for industrial robotics in the near future &ndash; with software and data at the core.</p>\n<p>\nOur mission is to make industrial robotics intelligent, accessible, and usable for millions more businesses, entrepreneurs, and developers. We are a dynamic team of engineers, roboticists, designers, and technologists who are passionate about unlocking the creative and economic potential of industrial robotics.</p></div><h2 class=\"jobSectionHeader\"><b>\nRole</b></h2>\n<p>\nThe Release Engineering &amp; Quality Assurance team is responsible for delivering releases of Intrinsic's software platform at high velocity without sacrificing trust in the quality of each release. As a Test Engineer on this team, your job will be to execute and review the tests which demonstrate this quality. When a test cannot be completed, you will document detailed steps for reproducing the error and work with the engineering team to verify that the issue has been resolved. In order to scale our efforts as our scope grows, you will also use your software development experience and the knowledge that you gain of Intrinsic's software to convert manual tests to automated tests.</p>\n<h2 class=\"jobSectionHeader\"><b>\nHow your work moves the mission forward</b></h2>\n<ul><li>Perform manual tests of Intrinsic software, both in simulation and on real hardware robotics workcells.</li>\n<li>Investigate and document failures and assist the engineering team with verifying fixes.</li>\n<li>Develop manual test plans into automated tests in order to scale our quality engineering processes.</li>\n<li>Support the release engineering team in delivering high quality software releases.</li>\n</ul><h2 class=\"jobSectionHeader\"><b>Skills you will need to be successful</b></h2>\n<ul><li>4-year degree in Computer Science, Robotics, Electrical Engineering, Mechanical Engineering, or equivalent experience.</li>\n<li>Excellent written communication skills and attention to detail. You will need to concisely describe deviations from expected behavior and provide accurate steps to reproduce errors that you find when running tests.</li>\n<li>Programming experience with Linux shell scripting, Python, or Go.</li>\n<li>Experience working with mobile robots or industrial robots in a lab or production environment.</li>\n</ul><h2 class=\"jobSectionHeader\"><b>Skills that will differentiate your candidacy</b></h2>\n<ul><li>Experience administering industrial robots in a lab or production environment.</li>\n<li>Experience with Cypress.io, Beautiful Soup, or similar browser automation and scraping tools.</li>\n<li>Technical writing and/or presentation experience. Have you published any projects with really good documentation?</li>\n<li>Experience working with software build systems such as Bazel or CMake.</li></ul><p></p><div><p><br>\nAt Intrinsic, we don't just accept difference - we celebrate it, we support it, and we thrive on it for the benefit of our employees, our products and our community. We are proud to be an equal opportunity workplace and an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements.</p>\n<p>\nIf you have a disability or special need that requires accommodation, please contact us at: candidate-support@intrinsic.ai.</p></div></div>",
+                "discoverDate": "2024-12-13T00:00:00",
+                "eolHashCode": 0,
+                "importConfigId": 322429,
+                "jobReqId": 1009526149399,
+                "jobSource": "Indeed Job Search Platform",
+                "jobTitleId": 0,
+                "jobTitleText": "Robotics Test Engineer",
+                "listingId": 1009526149399
+            },
+            "jobListingAdminDetails": {
+                "__typename": "JobListingAdminDetailsVO",
+                "adOrderId": 0,
+                "cpcVal": null,
+                "importConfigId": null,
+                "jobListingId": 1009526149399,
+                "jobSourceId": 0,
+                "userEligibleForAdminJobDetails": false
+            },
+            "map": {
+                "__typename": "Map",
+                "address": null,
+                "cityName": "München",
+                "country": "Germany",
+                "employer": {
+                    "__typename": "Employer",
+                    "id": 5706716,
+                    "name": "Intrinsic Innovation LLC"
+                },
+                "lat": 48.13704,
+                "lng": 11.575529,
+                "locationName": "München",
+                "postalCode": null,
+                "stateName": "Bayern"
+            },
+            "overview": {
+                "__typename": "Employer",
+                "ceo": {
+                    "__typename": "Ceo",
+                    "name": "Wendy Tan White",
+                    "photoUrl": null
+                },
+                "headquarters": "Mountain View, Vereinigte Staaten von Amerika",
+                "id": 5706716,
+                "links": {
+                    "__typename": "EiEmployerLinks",
+                    "benefitsUrl": "/Benefits/Intrinsic-Benefits-E5706716.htm",
+                    "overviewUrl": "/Überblick/Arbeit-bei-Intrinsic-EI_IE5706716.11,20.htm",
+                    "photosUrl": "/Fotos/Intrinsic-Bürofotos-E5706716.htm",
+                    "reviewsUrl": "/Bewertungen/Intrinsic-Bewertungen-E5706716.htm",
+                    "salariesUrl": "/Gehalt/Intrinsic-Gehälter-E5706716.htm"
+                },
+                "name": "Intrinsic Innovation LLC",
+                "primaryIndustry": {
+                    "__typename": "EmployerIndustry",
+                    "industryId": 200061,
+                    "industryName": "Unternehmenssoftware & Netzwerklösungen",
+                    "sectorId": 10013,
+                    "sectorName": "Informationstechnologie"
+                },
+                "ratings": {
+                    "__typename": "DefaultEmployerRatings",
+                    "careerOpportunitiesRating": 4.4,
+                    "ceoRating": 1,
+                    "ceoRatingsCount": 11,
+                    "compensationAndBenefitsRating": 4.6,
+                    "cultureAndValuesRating": 4.4,
+                    "overallRating": 4.5,
+                    "recommendToFriendRating": 0.92,
+                    "seniorManagementRating": 4.3,
+                    "workLifeBalanceRating": 4.1
+                },
+                "revenue": "Unbekannt/Nicht zutreffend",
+                "shortName": "Intrinsic",
+                "size": "201 bis 500 Mitarbeiter",
+                "sizeCategory": "MEDIUM",
+                "squareLogoUrl": "https://media.glassdoor.com/sql/5706716/intrinsic-innovation-squareLogo-1627925356943.png",
+                "type": "Privatunternehmen",
+                "website": "https://intrinsic.ai/careers/",
+                "yearFounded": 2021
+            },
+            "photos": {
+                "__typename": "EmployerPhotosHolder",
+                "photos": [
+                    {
+                        "__typename": "EmployerPhoto",
+                        "caption": "Robots in Action",
+                        "photoId": 0,
+                        "photoId2x": 0,
+                        "photoLink": "/Photos/Intrinsic-Office-Photos-IMG13438984.htm",
+                        "photoUrl": "https://media.glassdoor.com/lst/23/76/61/98/robots-in-action.jpg?signature=9cfb954dec3a6ceebffa41349555d1b48ae2c420d9911f1067a5d8b93b70c986",
+                        "photoUrl2x": "https://media.glassdoor.com/lst2x/23/76/61/98/robots-in-action.jpg?signature=8710c68e8d78d3d7613f05273f096205957d2a4227c04aa63061ddbc68c0cf38"
+                    },
+                    {
+                        "__typename": "EmployerPhoto",
+                        "caption": "Team Fun",
+                        "photoId": 0,
+                        "photoId2x": 0,
+                        "photoLink": "/Photos/Intrinsic-Office-Photos-IMG13438989.htm",
+                        "photoUrl": "https://media.glassdoor.com/lst/8a/5b/07/03/team-fun.jpg?signature=1f7a3cccf379fc242321ce8aea8604c4be47207ee15aa9c66f5c26f4a2267c6a",
+                        "photoUrl2x": "https://media.glassdoor.com/lst2x/8a/5b/07/03/team-fun.jpg?signature=7fd5eb5231723186c92f38928fb0809fc0043b56dd1f7f7fd3c79dfd62fb27f7"
+                    },
+                    {
+                        "__typename": "EmployerPhoto",
+                        "caption": "Team Presentations",
+                        "photoId": 0,
+                        "photoId2x": 0,
+                        "photoLink": "/Photos/Intrinsic-Office-Photos-IMG13438990.htm",
+                        "photoUrl": "https://media.glassdoor.com/lst/34/93/79/5a/team-presentations.jpg?signature=ccda7c7666286bc7f5ddbf3b8f86b2a427dbbe9754b4dea8045fd30e58fe80ec",
+                        "photoUrl2x": "https://media.glassdoor.com/lst2x/34/93/79/5a/team-presentations.jpg?signature=13c49b217f53f3b5014af805e1b6cb9ed1470d375e873c7e88342213b273fbc9"
+                    },
+                    {
+                        "__typename": "EmployerPhoto",
+                        "caption": "Team Building Activities",
+                        "photoId": 0,
+                        "photoId2x": 0,
+                        "photoLink": "/Photos/Intrinsic-Office-Photos-IMG13438993.htm",
+                        "photoUrl": "https://media.glassdoor.com/lst/2f/8e/5f/66/team-building-activities.jpg?signature=680b05e33166beba1eaaabd9395fd3908d02d694ee9740dbab51aa604882488c",
+                        "photoUrl2x": "https://media.glassdoor.com/lst2x/2f/8e/5f/66/team-building-activities.jpg?signature=bb5d3336b31de9944a79f1c4ebe2c7ed69c88b9ee93bd0a1a3d1b0b69d7b3ad7"
+                    },
+                    {
+                        "__typename": "EmployerPhoto",
+                        "caption": "All Hands",
+                        "photoId": 0,
+                        "photoId2x": 0,
+                        "photoLink": "/Photos/Intrinsic-Office-Photos-IMG13438994.htm",
+                        "photoUrl": "https://media.glassdoor.com/lst/c5/c1/91/98/all-hands.jpg?signature=48a2ca45ed80db774f5f87f94221584ba3f64f61ce9e2b742689e9a8fedc73fd",
+                        "photoUrl2x": "https://media.glassdoor.com/lst2x/c5/c1/91/98/all-hands.jpg?signature=f0ad1892ed6cefe6129e70afa3bde745ca97117768ee7590b7c622833846839b"
+                    },
+                    {
+                        "__typename": "EmployerPhoto",
+                        "caption": "Robot Lab",
+                        "photoId": 0,
+                        "photoId2x": 0,
+                        "photoLink": "/Photos/Intrinsic-Office-Photos-IMG13438995.htm",
+                        "photoUrl": "https://media.glassdoor.com/lst/35/c0/52/ca/robot-lab.jpg?signature=dd27f2e466a52e4f2a7a0e926ef0b032722e869ffde9fc7c770da5b8d783667f",
+                        "photoUrl2x": "https://media.glassdoor.com/lst2x/35/c0/52/ca/robot-lab.jpg?signature=7c35fbfa412287c132622940d371e1e066a2e102bb2d06e67ed4ddb93b8c3c83"
+                    },
+                    {
+                        "__typename": "EmployerPhoto",
+                        "caption": "Team",
+                        "photoId": 0,
+                        "photoId2x": 0,
+                        "photoLink": "/Photos/Intrinsic-Office-Photos-IMG13438996.htm",
+                        "photoUrl": "https://media.glassdoor.com/lst/ea/ca/bb/c2/team.jpg?signature=f537fb539f58e4bb324aaefa5a251ea314e7a24efffc1c26258652a4f4ebd22a",
+                        "photoUrl2x": "https://media.glassdoor.com/lst2x/ea/ca/bb/c2/team.jpg?signature=b142b7442b62d2d6cf5afce0b97c56b09715ab2c6e65208acea8df26b89e334c"
+                    }
+                ]
+            },
+            "reviews": {
+                "__typename": "EmployerReviewsHolder",
+                "reviews": []
+            },
+            "similarJobs": [
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/software-engineer-jobs-SRCH_KO0,17.htm",
+                    "relatedJobTitle": "software engineer"
+                },
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/software-developer-jobs-SRCH_KO0,18.htm",
+                    "relatedJobTitle": "software developer"
+                },
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/performance-tester-jobs-SRCH_KO0,18.htm",
+                    "relatedJobTitle": "performance tester"
+                },
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/quality-assurance-engineer-jobs-SRCH_KO0,26.htm",
+                    "relatedJobTitle": "quality assurance engineer"
+                },
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/test-automation-engineer-jobs-SRCH_KO0,24.htm",
+                    "relatedJobTitle": "test automation engineer"
+                },
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/test-engineer-jobs-SRCH_KO0,13.htm",
+                    "relatedJobTitle": "test engineer"
+                },
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/qa-engineer-jobs-SRCH_KO0,11.htm",
+                    "relatedJobTitle": "qa engineer"
+                }
+            ],
+            "baseUrl": "https://glassdoor.com"
+        }
+    },
+    {
+        "job_title": "Functional Test Platform Principal Engineer",
+        "job_id": "1009480704833",
+        "job_normalized_title": "engineer",
+        "job_url": "https://www.glassdoor.com/partner/jobListing.htm?pos=101&ao=1136043&s=58&guid=0000019427e1f580b5a25c38de42adb4&src=GD_JOB_AD&t=NS&vt=w&ea=1&cs=1_ccc456cc&cb=1735835907653&jobListingId=1009480704833",
+        "job_location": {
+            "unknown": "Planegg",
+            "city": "planegg",
+            "country": "germany",
+            "zip": null
+        },
+        "job_description": "Here at The Exploration Company, we are developing, producing, and operating Nyx, a modular and reusable space orbital vehicle that can eventually be refuelled in orbit and that can carry cargo - and potentially humans in the longer run.\n\nWe want you as a talented Functional Test Platform Principal Engineer to help us in our mission by:\n\n * designing and integrating our system test platforms (Software In the Loop, Hardware in the Loop...) both on the hardware and software aspects\n\n * defining system test procedure to be run on those platforms, running the procedure and exploiting the test results to prove compliance to the requirements\n\n\n\n\nKEY RESPONSIBILITIES\n\nIn your capacity as a Functional Test Platform Principal Engineer, your role will be continuously evolving, but day to day your duties will include:\n\n * Lead the design, development, and testing of the Functional Test Platform as well as the execution and exploitation of the system tests\n\n * Build and scale the team in charge of these activities\n\n * Provide technical guidance and support to junior engineers and team members\n\n * Coordinate the overall activities related to Functional Test Platform and Test Execution within the team.\n\n * Drive continuous improvement efforts to enhance the accuracy, reliability, and efficiency of the Functional Test Platform and Test Execution\n\n\n\nYou and your team will be in charge of the following activities:\n\n * Define and refine the architecture of our HIL platforms to ensure optimal performance and scalability both on the hardware (front-end selection to interface with the Product under Test) and software aspects (Test Supervisor, Real-Time Simulation Framework, Database,..)\n\n * Develop and integrate the numerical model in the Real-Time simulator used to close the loop on the HIL platform\n\n * Lead discussions with stakeholders to gather requirements and ensure alignment with overall project objectives, especially with the subsystem and system qualification logic\n\n * Evaluate and select the appropriate hardware and software for the platforms\n\n * Perform make or buy tradeoffs; collaborate with external partners or vendors to request, evaluate and integrate hardware or software\n\n * Define and apply the process to create test procedure based on the test plan provided by the other teams\n\n * Execute the test procedure on the Functional Test Platform and exploit these test results, using as much as possible automation to streamline the process\n\n * Provide support for troubleshooting and resolving integration issues.\n\n * Collaborate with cross-functional teams to ensure seamless integration of the Functional Test Platform with the other subsystems.\n\n\n\n\nWHAT WE WOULD LOVE TO SEE FROM YOU\n\nIn the role of Functional Test Platform Principal l Engineer ideally, you will have the following:\n\n * Extensive experience of verification and validation of avionics and embedded software\n\n * Proven experience in designing and operating HIL platforms and running system tests on these platforms\n\n * Strong leadership and management skills to lead a development team and ensure timely delivery of high-quality products\n\n * Bachelor's degree or higher in Electronic Engineering, Computer Science, Aerospace Engineering, or a related field\n\n * Excellent problem-solving skills and the ability to work effectively in a fast-paced, collaborative environment.\n\n * Strong communication skills with the ability to convey complex technical concepts to diverse audiences.\n\n * Ability to promote and develop the skills and capabilities of team members and support their development.\n\nWhy you should join us!\n\nWhat makes us special here at The Exploration Company and why we think you will enjoy working here is:\n\n * We’re Agile - we make decisions fast whilst keeping our goals and systems in mind\n\n * We’re Open and Collaborative - we are transparent about risks and obstacles, so that we can cooperate to overcome them\n\n * We have a lot of Fun - we refuel our energy knowing we are democratising space. It’s a wonderful and rare opportunity, are YOU up for the challenge?\n\nWe'd love to hear from you if you wish to be a part of our journey. Please submit your CV now for immediate consideration and we will be in touch shortly.\n\nThe Exploration Company is an equal opportunity employer and values diversity. We do not discriminate based on race, religion, colour, national origin, gender, sexual orientation, age, marital status or disability status. Relocation assistance is provided for those willing to relocate including visa sponsorship where applicable.",
+        "job_description_html": "<div><p>Here at The Exploration Company, we are developing, producing, and operating Nyx, a modular and reusable space orbital vehicle that can eventually be refuelled in orbit and that can carry cargo - and potentially humans in the longer run.</p><p>\nWe want you as a talented Functional Test Platform Principal Engineer to help us in our mission by:</p><ul><li><p>\ndesigning and integrating our system test platforms (Software In the Loop, Hardware in the Loop...) both on the hardware and software aspects</p></li><li><p>\ndefining system test procedure to be run on those platforms, running the procedure and exploiting the test results to prove compliance to the requirements</p></li></ul><p></p><h2 class=\"jobSectionHeader\"><b>\nKey Responsibilities</b></h2><p>\nIn your capacity as a Functional Test Platform Principal Engineer, your role will be continuously evolving, but day to day your duties will include:</p><ul><li><p>\nLead the design, development, and testing of the Functional Test Platform as well as the execution and exploitation of the system tests</p></li><li><p>\nBuild and scale the team in charge of these activities</p></li><li><p>\nProvide technical guidance and support to junior engineers and team members</p></li><li><p>\nCoordinate the overall activities related to Functional Test Platform and Test Execution within the team.</p></li><li><p>\nDrive continuous improvement efforts to enhance the accuracy, reliability, and efficiency of the Functional Test Platform and Test Execution</p></li></ul><p></p><p>\nYou and your team will be in charge of the following activities:</p><ul><li><p>\nDefine and refine the architecture of our HIL platforms to ensure optimal performance and scalability both on the hardware (front-end selection to interface with the Product under Test) and software aspects (Test Supervisor, Real-Time Simulation Framework, Database,..)</p></li><li><p>\nDevelop and integrate the numerical model in the Real-Time simulator used to close the loop on the HIL platform</p></li><li><p>\nLead discussions with stakeholders to gather requirements and ensure alignment with overall project objectives, especially with the subsystem and system qualification logic</p></li><li><p>\nEvaluate and select the appropriate hardware and software for the platforms</p></li><li><p>\nPerform make or buy tradeoffs; collaborate with external partners or vendors to request, evaluate and integrate hardware or software</p></li><li><p>\nDefine and apply the process to create test procedure based on the test plan provided by the other teams</p></li><li><p>\nExecute the test procedure on the Functional Test Platform and exploit these test results, using as much as possible automation to streamline the process</p></li><li><p>\nProvide support for troubleshooting and resolving integration issues.</p></li><li><p>\nCollaborate with cross-functional teams to ensure seamless integration of the Functional Test Platform with the other subsystems.</p></li></ul><p></p><h2 class=\"jobSectionHeader\"><b>\nWhat we would love to see from you</b></h2><p>\nIn the role of Functional Test Platform Principal l Engineer ideally, you will have the following:</p><ul><li><p>\nExtensive experience of verification and validation of avionics and embedded software</p></li><li><p>\nProven experience in designing and operating HIL platforms and running system tests on these platforms</p></li><li><p>\nStrong leadership and management skills to lead a development team and ensure timely delivery of high-quality products</p></li><li><p>\nBachelor's degree or higher in Electronic Engineering, Computer Science, Aerospace Engineering, or a related field</p></li><li><p>\nExcellent problem-solving skills and the ability to work effectively in a fast-paced, collaborative environment.</p></li><li><p>\nStrong communication skills with the ability to convey complex technical concepts to diverse audiences.</p></li><li><p>\nAbility to promote and develop the skills and capabilities of team members and support their development.</p></li></ul><p><b>\nWhy you should join us!</b></p><p>\nWhat makes us special here at The Exploration Company and why we think you will enjoy working here is:</p><ul><li><p>\nWe&rsquo;re Agile - we make decisions fast whilst keeping our goals and systems in mind</p></li><li><p>\nWe&rsquo;re Open and Collaborative - we are transparent about risks and obstacles, so that we can cooperate to overcome them</p></li><li><p>\nWe have a lot of Fun - we refuel our energy knowing we are democratising space. It&rsquo;s a wonderful and rare opportunity, are YOU up for the challenge?</p></li></ul><p>\nWe'd love to hear from you if you wish to be a part of our journey. Please submit your CV now for immediate consideration and we will be in touch shortly.<br>\n<br>\n<i>The Exploration Company is an equal opportunity employer and values diversity. We do not discriminate based on race, religion, colour, national origin, gender, sexual orientation, age, marital status or disability status. Relocation assistance is provided for those willing to relocate including visa sponsorship where applicable.</i></p></div>",
+        "job_posted_date": "2024-12-09T00:00:00",
+        "job_remote": null,
+        "job_salary": {
+            "currency": "EUR",
+            "currency_symbol": "€",
+            "pay_period": "hourly",
+            "estimated": false
+        },
+        "job_candidate_numbers": null,
+        "job_job_types": [
+            "FULL_TIME"
+        ],
+        "job_levels": null,
+        "job_benefits_tags": [],
+        "job_shifts_and_schedule_tags": null,
+        "job_sponsored": false,
+        "job_language": null,
+        "job_poster_first_name": null,
+        "job_poster_last_name": null,
+        "job_poster_linkedin_profile_url": null,
+        "company_uri_providers": [],
+        "company_name": "Exploration",
+        "company_short_name": "Exploration",
+        "company_logo": "https://media.glassdoor.com/sql/4990525/exploration-squarelogo-1697012616859.png",
+        "company_headquarters_location": {
+            "city": "santa monica",
+            "unknown": "Santa Monica, Vereinigte Staaten von Amerika"
+        },
+        "company_sizes_str": "1 bis 50 Mitarbeiter",
+        "company_size": null,
+        "company_website": "www.exploration.io",
+        "company_revenue": "Unbekannt/Nicht zutreffend",
+        "company_url": "https://glassdoor.com/Überblick/Arbeit-bei-Exploration-EI_IE4990525.11,22.htm",
+        "company_description": null,
+        "company_tag_line": null,
+        "company_linkedin_follower_count": null,
+        "company_industries": null,
+        "company_locations": null,
+        "all": {
+            "__typename": "JobView",
+            "employerAttributes": {
+                "__typename": "EmployerAttributesHolder",
+                "attributes": []
+            },
+            "employerBenefits": {
+                "__typename": "FederatedBenefitsHolder",
+                "benefitReviews": [],
+                "benefitsOverview": {
+                    "__typename": "BenefitsOverviewVO",
+                    "benefitsHighlights": [],
+                    "employerBenefitSummary": null,
+                    "overallBenefitRating": 0
+                },
+                "numReviews": 3
+            },
+            "employerContent": null,
+            "employerReviewSummary": {
+                "__typename": "EmployerReviewSummaryHolder",
+                "reviewSummary": {
+                    "__typename": "ReviewsSummaryResponse",
+                    "highlightSummary": null
+                }
+            },
+            "gaTrackerData": {
+                "__typename": "GATrackerData",
+                "isSponsoredFromIndeed": false,
+                "isSponsoredFromJobListingHit": false,
+                "jobViewDisplayTimeMillis": 0,
+                "pageRequestGuid": "0000019427e1f580b5a25c38de42adb4",
+                "requiresTracking": false,
+                "searchTypeCode": "NS",
+                "trackingUrl": null
+            },
+            "header": {
+                "__typename": "JobViewHeader",
+                "adOrderId": 1136043,
+                "adOrderSponsorshipLevel": "Organic",
+                "advertiserType": "GENERAL",
+                "ageInDays": 84,
+                "applicationId": 0,
+                "appliedDate": null,
+                "applyButtonDisabled": false,
+                "applyUrl": "/partner/jobListing.htm?pos=101&ao=1136043&tgt=APPLY_START&s=58&guid=0000019427e1f580b5a25c38de42adb4&src=GD_JOB_VIEW&t=NS&vt=w&ea=1&cs=1_14098b45&cb=1735835907653&jobListingId=1009480704833&jrtk=5-yul1-3-1igju3tehj72f801",
+                "blur": true,
+                "categoryMgocId": 10049,
+                "coverPhoto": {
+                    "__typename": "CoverPhoto",
+                    "url": null
+                },
+                "divisionEmployerName": null,
+                "easyApply": true,
+                "easyApplyMethod": "INDEED",
+                "employer": {
+                    "__typename": "Employer",
+                    "activeStatus": "INACTIVE",
+                    "bestProfile": {
+                        "__typename": "EmployerProfile",
+                        "id": 9138434
+                    },
+                    "id": 4990525,
+                    "name": "Exploration",
+                    "shortName": "Exploration",
+                    "size": "1 bis 50 Mitarbeiter",
+                    "squareLogoUrl": "https://media.glassdoor.com/sql/4990525/exploration-squarelogo-1697012616859.png"
+                },
+                "employerNameFromSearch": "The Exploration Company",
+                "expired": false,
+                "goc": "ingenieur (m/w/d)",
+                "hideCEOInfo": false,
+                "indeedApplyMetadata": "data-indeed-apply-jk=\"1f6cd66b0b78eb36\"data-indeed-apply-jobcountry=\"DE\"data-indeed-apply-joburl=\"https://www.glassdoor.de/partner/jobListing.htm?pos=101&ao=1136043&s=58&guid=0000019427e1f580b5a25c38de42adb4&src=GD_JOB_AD&t=NS&vt=w&ea=1&cs=1_ccc456cc&cb=1735835907653&jobListingId=1009480704833\"data-indeed-apply-partnerapitoken=\"7cc68c0d955e00fa10943c90dd4b7316f6c038bd1c0e36b666a064fb53aa9d01\"data-indeed-apply-partnermeta=\"&jobListingId=1009480704833&adOrderId=1136043&purchaseAdOrderId=0&userId=0&userGuid=551f6d92-3240-49a8-8a3e-6962caae1dc0&pageGuid=0000019427e1f580b5a25c38de42adb4&ip=73.152.87.95&dt=1&pt=3&vt=4&locale=de-DE&from=glassdoor&asid=551f6d92-3240-49a8-8a3e-6962caae1dc0.1735835907.0&spn=0&ipLocType=C&ipLocId=1130113&searchType=NS&\"data-indeed-apply-continueurl=\"https://www.glassdoor.de/partner/jobListing.htm?pos=101&ao=1136043&s=58&guid=0000019427e1f580b5a25c38de42adb4&src=GD_JOB_AD&t=NS&vt=w&ea=1&cs=1_ccc456cc&cb=1735835907653&jobListingId=1009480704833\"data-indeed-apply-pingbackurl=\"https://gdc.indeed.com/conv/orgIndApp?jk=1f6cd66b0b78eb36&ctk=1igju3tekj72f801&astse=dfe7e5bce70ac06e&assa=7565&channel=ns-dk-o-w-s_58-tld_7\"",
+                "indeedJobAttribute": {
+                    "__typename": "IndeedJobAttribute",
+                    "education": [
+                        "HFDVW"
+                    ],
+                    "educationLabel": [
+                        "Bachelor's degree"
+                    ],
+                    "skills": [
+                        "JMBPA",
+                        "W3PMJ"
+                    ],
+                    "skillsLabel": [
+                        "Embedded software",
+                        "Leadership"
+                    ],
+                    "yearsOfExperienceLabel": []
+                },
+                "isIndexableJobViewPage": false,
+                "jobCountryId": 96,
+                "jobLink": "/partner/jobListing.htm?pos=101&ao=1136043&s=58&guid=0000019427e1f580b5a25c38de42adb4&src=GD_JOB_AD&t=NS&vt=w&ea=1&cs=1_ccc456cc&cb=1735835907653&jobListingId=1009480704833",
+                "jobResultTrackingKey": "5-yul1-3-1igju3tehj72f801",
+                "jobTitleText": "Functional Test Platform Principal Engineer",
+                "jobType": [
+                    "Full-time"
+                ],
+                "jobTypeKeys": [
+                    "search-jobs.job-type-options.fulltime"
+                ],
+                "locId": 2503927,
+                "locationName": "Planegg",
+                "locationType": "C",
+                "needsCommission": false,
+                "normalizedJobTitle": "engineer",
+                "organic": true,
+                "payCurrency": "EUR",
+                "payPeriod": null,
+                "payPeriodAdjustedPay": null,
+                "rating": 4,
+                "remoteWorkTypes": null,
+                "salarySource": null,
+                "savedJobId": 0,
+                "seoJobLink": "https://www.glassdoor.de/job-listing/functional-test-platform-principal-engineer-the-exploration-company-JV_IC2503927_KO0,43_KE44,67.htm?jl=1009480704833",
+                "sgocId": 1007,
+                "sponsored": false,
+                "urgencySignal": null
+            },
+            "job": {
+                "__typename": "JobDetails",
+                "description": "<div><p>Here at The Exploration Company, we are developing, producing, and operating Nyx, a modular and reusable space orbital vehicle that can eventually be refuelled in orbit and that can carry cargo - and potentially humans in the longer run.</p><p>\nWe want you as a talented Functional Test Platform Principal Engineer to help us in our mission by:</p><ul><li><p>\ndesigning and integrating our system test platforms (Software In the Loop, Hardware in the Loop...) both on the hardware and software aspects</p></li><li><p>\ndefining system test procedure to be run on those platforms, running the procedure and exploiting the test results to prove compliance to the requirements</p></li></ul><p></p><h2 class=\"jobSectionHeader\"><b>\nKey Responsibilities</b></h2><p>\nIn your capacity as a Functional Test Platform Principal Engineer, your role will be continuously evolving, but day to day your duties will include:</p><ul><li><p>\nLead the design, development, and testing of the Functional Test Platform as well as the execution and exploitation of the system tests</p></li><li><p>\nBuild and scale the team in charge of these activities</p></li><li><p>\nProvide technical guidance and support to junior engineers and team members</p></li><li><p>\nCoordinate the overall activities related to Functional Test Platform and Test Execution within the team.</p></li><li><p>\nDrive continuous improvement efforts to enhance the accuracy, reliability, and efficiency of the Functional Test Platform and Test Execution</p></li></ul><p></p><p>\nYou and your team will be in charge of the following activities:</p><ul><li><p>\nDefine and refine the architecture of our HIL platforms to ensure optimal performance and scalability both on the hardware (front-end selection to interface with the Product under Test) and software aspects (Test Supervisor, Real-Time Simulation Framework, Database,..)</p></li><li><p>\nDevelop and integrate the numerical model in the Real-Time simulator used to close the loop on the HIL platform</p></li><li><p>\nLead discussions with stakeholders to gather requirements and ensure alignment with overall project objectives, especially with the subsystem and system qualification logic</p></li><li><p>\nEvaluate and select the appropriate hardware and software for the platforms</p></li><li><p>\nPerform make or buy tradeoffs; collaborate with external partners or vendors to request, evaluate and integrate hardware or software</p></li><li><p>\nDefine and apply the process to create test procedure based on the test plan provided by the other teams</p></li><li><p>\nExecute the test procedure on the Functional Test Platform and exploit these test results, using as much as possible automation to streamline the process</p></li><li><p>\nProvide support for troubleshooting and resolving integration issues.</p></li><li><p>\nCollaborate with cross-functional teams to ensure seamless integration of the Functional Test Platform with the other subsystems.</p></li></ul><p></p><h2 class=\"jobSectionHeader\"><b>\nWhat we would love to see from you</b></h2><p>\nIn the role of Functional Test Platform Principal l Engineer ideally, you will have the following:</p><ul><li><p>\nExtensive experience of verification and validation of avionics and embedded software</p></li><li><p>\nProven experience in designing and operating HIL platforms and running system tests on these platforms</p></li><li><p>\nStrong leadership and management skills to lead a development team and ensure timely delivery of high-quality products</p></li><li><p>\nBachelor's degree or higher in Electronic Engineering, Computer Science, Aerospace Engineering, or a related field</p></li><li><p>\nExcellent problem-solving skills and the ability to work effectively in a fast-paced, collaborative environment.</p></li><li><p>\nStrong communication skills with the ability to convey complex technical concepts to diverse audiences.</p></li><li><p>\nAbility to promote and develop the skills and capabilities of team members and support their development.</p></li></ul><p><b>\nWhy you should join us!</b></p><p>\nWhat makes us special here at The Exploration Company and why we think you will enjoy working here is:</p><ul><li><p>\nWe&rsquo;re Agile - we make decisions fast whilst keeping our goals and systems in mind</p></li><li><p>\nWe&rsquo;re Open and Collaborative - we are transparent about risks and obstacles, so that we can cooperate to overcome them</p></li><li><p>\nWe have a lot of Fun - we refuel our energy knowing we are democratising space. It&rsquo;s a wonderful and rare opportunity, are YOU up for the challenge?</p></li></ul><p>\nWe'd love to hear from you if you wish to be a part of our journey. Please submit your CV now for immediate consideration and we will be in touch shortly.<br>\n<br>\n<i>The Exploration Company is an equal opportunity employer and values diversity. We do not discriminate based on race, religion, colour, national origin, gender, sexual orientation, age, marital status or disability status. Relocation assistance is provided for those willing to relocate including visa sponsorship where applicable.</i></p></div>",
+                "discoverDate": "2024-12-09T00:00:00",
+                "eolHashCode": 0,
+                "importConfigId": 322429,
+                "jobReqId": 1009480704833,
+                "jobSource": "Indeed Job Search Platform",
+                "jobTitleId": 0,
+                "jobTitleText": "Functional Test Platform Principal Engineer",
+                "listingId": 1009480704833
+            },
+            "jobListingAdminDetails": {
+                "__typename": "JobListingAdminDetailsVO",
+                "adOrderId": 0,
+                "cpcVal": null,
+                "importConfigId": null,
+                "jobListingId": 1009480704833,
+                "jobSourceId": 0,
+                "userEligibleForAdminJobDetails": false
+            },
+            "map": {
+                "__typename": "Map",
+                "address": null,
+                "cityName": "Planegg",
+                "country": "Germany",
+                "employer": {
+                    "__typename": "Employer",
+                    "id": 4990525,
+                    "name": "Exploration"
+                },
+                "lat": 48.105816,
+                "lng": 11.424579,
+                "locationName": "Planegg",
+                "postalCode": null,
+                "stateName": "Bayern"
+            },
+            "overview": {
+                "__typename": "Employer",
+                "ceo": null,
+                "headquarters": "Santa Monica, Vereinigte Staaten von Amerika",
+                "id": 4990525,
+                "links": {
+                    "__typename": "EiEmployerLinks",
+                    "benefitsUrl": "/Benefits/Exploration-Benefits-E4990525.htm",
+                    "overviewUrl": "/Überblick/Arbeit-bei-Exploration-EI_IE4990525.11,22.htm",
+                    "photosUrl": "/Fotos/Exploration-Bürofotos-E4990525.htm",
+                    "reviewsUrl": "/Bewertungen/Exploration-Bewertungen-E4990525.htm",
+                    "salariesUrl": "/Gehalt/Exploration-Gehälter-E4990525.htm"
+                },
+                "name": "Exploration",
+                "primaryIndustry": null,
+                "ratings": {
+                    "__typename": "DefaultEmployerRatings",
+                    "careerOpportunitiesRating": -1,
+                    "ceoRating": null,
+                    "ceoRatingsCount": 0,
+                    "compensationAndBenefitsRating": -1,
+                    "cultureAndValuesRating": -1,
+                    "overallRating": 4,
+                    "recommendToFriendRating": -1,
+                    "seniorManagementRating": -1,
+                    "workLifeBalanceRating": -1
+                },
+                "revenue": "Unbekannt/Nicht zutreffend",
+                "shortName": "Exploration",
+                "size": "1 bis 50 Mitarbeiter",
+                "sizeCategory": "SMALL",
+                "squareLogoUrl": "https://media.glassdoor.com/sql/4990525/exploration-squarelogo-1697012616859.png",
+                "type": "Privatunternehmen",
+                "website": "www.exploration.io",
+                "yearFounded": null
+            },
+            "photos": {
+                "__typename": "EmployerPhotosHolder",
+                "photos": []
+            },
+            "reviews": {
+                "__typename": "EmployerReviewsHolder",
+                "reviews": []
+            },
+            "similarJobs": [
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/piping-designer-jobs-SRCH_KO0,15.htm",
+                    "relatedJobTitle": "piping designer"
+                },
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/drafter-jobs-SRCH_KO0,7.htm",
+                    "relatedJobTitle": "drafter"
+                },
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/civil-eit-jobs-SRCH_KO0,9.htm",
+                    "relatedJobTitle": "civil eit"
+                },
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/mechanical-fitter-jobs-SRCH_KO0,17.htm",
+                    "relatedJobTitle": "mechanical fitter"
+                },
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/measurement-analyst-jobs-SRCH_KO0,19.htm",
+                    "relatedJobTitle": "measurement analyst"
+                },
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/automation-manager-jobs-SRCH_KO0,18.htm",
+                    "relatedJobTitle": "automation manager"
+                },
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/materials-scientist-jobs-SRCH_KO0,19.htm",
+                    "relatedJobTitle": "materials scientist"
+                },
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/power-plant-manager-jobs-SRCH_KO0,19.htm",
+                    "relatedJobTitle": "power plant manager"
+                },
+                {
+                    "__typename": "SimilarJob",
+                    "careerUrl": "/Job/project-controls-manager-jobs-SRCH_KO0,24.htm",
+                    "relatedJobTitle": "project controls manager"
+                }
+            ],
+            "baseUrl": "https://glassdoor.com"
+        }
+    }
+]

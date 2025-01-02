@@ -3,7 +3,7 @@ import time
 import logging
 from itertools import islice
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request, Depends
 from pydantic import BaseModel
 from typing import List
 import requests
@@ -16,6 +16,7 @@ import io
 from fastapi.responses import StreamingResponse
 from docx import Document
 from docx.shared import Pt, Inches
+from starlette.middleware.sessions import SessionMiddleware
 
 # New imports for Groq
 from groq import Groq
@@ -34,6 +35,31 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Simulated session storage (in-memory)
+session_store = {}
+
+# Function to generate a new secret key
+def generate_secret_key():
+    return os.urandom(24).hex()
+
+# Function to get session data
+def get_session_data(request: Request):
+    session_id = request.cookies.get("session_id")
+    if session_id and session_id in session_store:
+        return session_store[session_id]
+    return None
+
+# Function to set session data
+def set_session_data(request: Request, data):
+    session_id = request.cookies.get("session_id")
+    if not session_id:
+        session_id = str(uuid.uuid4())
+        request.cookies["session_id"] = session_id
+    session_store[session_id] = data
+
+# Add session middleware with a dynamically generated secret key
+app.add_middleware(SessionMiddleware, secret_key=generate_secret_key())
 
 # Default paths
 BASE_DIR = "data"
@@ -171,22 +197,30 @@ def standardize_jobs(jobs):
 
 
 @app.post("/upload-jobs/")
-async def upload_jobs():
+async def upload_jobs(batch_size=10):
     global jobs_data
     jobs_data = []
     if not os.path.exists(JOBS_DIR):
         raise HTTPException(status_code=404, detail=f"Directory {JOBS_DIR} not found.")
+
+    file_names = [f for f in os.listdir(JOBS_DIR) if f.endswith('.json')]
     
-    for file_name in os.listdir(JOBS_DIR):
+    def process_file(file_name):
         file_path = os.path.join(JOBS_DIR, file_name)
         try:
             with open(file_path, "r", encoding="utf-8") as file:
                 raw_jobs = json.load(file)
-                standardized_jobs = standardize_jobs(raw_jobs)
-                jobs_data.extend(standardized_jobs)
+                return standardize_jobs(raw_jobs)
         except Exception as e:
             logging.error(f"Error loading or standardizing file {file_name}: {e}")
-            continue
+            return []
+
+    with ThreadPoolExecutor() as executor:
+        for i in range(0, len(file_names), batch_size):
+            batch = file_names[i:i + batch_size]
+            results = executor.map(process_file, batch)
+            for standardized_jobs in results:
+                jobs_data.extend(standardized_jobs)
 
     return {"message": f"{len(jobs_data)} jobs uploaded and standardized from {JOBS_DIR}."}
 
@@ -214,9 +248,13 @@ async def upload_cv():
     return {"message": "CV uploaded and skills extracted.", "skills": cv_data["skills"]}
 
 @app.get("/match-jobs/", response_model=List[JobMatch])
-async def get_matched_jobs():
+async def get_matched_jobs(request: Request, session_data=Depends(get_session_data)):
     if not jobs_data or not cv_data:
         raise HTTPException(status_code=400, detail="Jobs or CV data not uploaded.")
+
+    # Check if matched jobs are already in session
+    if session_data and "matched_jobs" in session_data:
+        return session_data["matched_jobs"]
 
     start_time = time.time()
 
@@ -247,6 +285,11 @@ async def get_matched_jobs():
 
     end_time = time.time()
     print(f"Total matching time: {end_time - start_time} seconds")
+
+    # Store matched jobs in session
+    if session_data is not None:
+        session_data["matched_jobs"] = results
+        set_session_data(request, session_data)
 
     return results
 
@@ -363,7 +406,7 @@ async def generate_cover_letter(job_id: str):
 
         # Prepare the response headers with the company name in the filename
         company_name = job.get('company', 'Company').replace(' ', '_')
-        filename = f"Cover_Letter_{company_name}.docx"
+        filename = f"cover_letter_{company_name}.docx"
         headers = {
             'Content-Disposition': f'attachment; filename="{filename}"'
         }
@@ -380,6 +423,6 @@ async def generate_cover_letter(job_id: str):
 
 # Run the app for testing
 if __name__ == "__main__":
-    populate_tokens(pool_size=3)  # Generate a pool of 2 tokens
+    populate_tokens(pool_size=2)  # Generate a pool of 2 tokens
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

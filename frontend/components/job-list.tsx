@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge'
 import { useToast } from '@/hooks/use-toast'
 import { Building2, Briefcase, BarChart, ExternalLink, BookmarkPlus, BookmarkCheck } from 'lucide-react'
 import { JobMatch } from '@/types/job'
+import { getSavedJobs, saveJob } from '@/lib/jobs'
 
 export function JobList() {
   const [jobs, setJobs] = useState<JobMatch[]>([])
@@ -18,28 +19,30 @@ export function JobList() {
 
   useEffect(() => {
     // Load saved jobs from localStorage
-    const saved = localStorage.getItem('savedJobs')
+    const saved = localStorage.getItem('matchedJobs')
     if (saved) {
-      setSavedJobs(JSON.parse(saved))
+      setJobs(JSON.parse(saved))
+      setLoading(false)
+    } else {
+      fetchJobs()
     }
-
-    const fetchJobs = async () => {
-      try {
-        const res = await fetch('http://localhost:8000/match-jobs/')
-        if (!res.ok) {
-          throw new Error('Failed to fetch matched jobs')
-        }
-        const data: JobMatch[] = await res.json()
-        setJobs(data)
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'Failed to fetch jobs')
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchJobs()
   }, [])
+
+  const fetchJobs = async () => {
+    try {
+      const res = await fetch('http://localhost:8000/match-jobs/')
+      if (!res.ok) {
+        throw new Error('Failed to fetch matched jobs')
+      }
+      const data: JobMatch[] = await res.json()
+      setJobs(data)
+      localStorage.setItem('matchedJobs', JSON.stringify(data))
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to fetch jobs')
+    } finally {
+      setLoading(false)
+    }
+  }
 
   const toggleSaveJob = (jobTitle: string) => {
     const newSavedJobs = savedJobs.includes(jobTitle)
