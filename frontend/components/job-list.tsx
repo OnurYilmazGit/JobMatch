@@ -4,19 +4,9 @@ import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast'
-import { Building2, Briefcase, BarChart, ExternalLink, BookmarkPlus, BookmarkCheck, AlertCircle, SearchX } from 'lucide-react'
-
-interface JobMatch {
-  positionName: string
-  company: string
-  matchScore: number
-  matchedSkills: string[]
-  missingSkills: string[]
-  description: string
-  url: string
-}
+import { Building2, Briefcase, BarChart, ExternalLink, BookmarkPlus, BookmarkCheck } from 'lucide-react'
+import { JobMatch } from '@/types/job'
 
 export function JobList() {
   const [jobs, setJobs] = useState<JobMatch[]>([])
@@ -39,7 +29,7 @@ export function JobList() {
         if (!res.ok) {
           throw new Error('Failed to fetch matched jobs')
         }
-        const data = await res.json()
+        const data: JobMatch[] = await res.json()
         setJobs(data)
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to fetch jobs')
@@ -66,6 +56,49 @@ export function JobList() {
         : "You can find this job in your saved jobs section",
     })
   }
+
+  const handleGenerateCoverLetter = async (jobId: string) => {
+    try {
+        const response = await fetch(`http://localhost:8000/generate-cover-letter/?job_id=${jobId}`, {
+            method: 'POST',
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to generate cover letter');
+        }
+
+        // Get the filename from the Content-Disposition header
+        const contentDisposition = response.headers.get('Content-Disposition');
+        let filename = 'cover_letter.docx';
+        if (contentDisposition && contentDisposition.includes('attachment')) {
+            const match = contentDisposition.match(/filename="?(.+)"?/);
+            if (match && match[1]) {
+                filename = match[1];
+            }
+        }
+
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        a.click();
+        window.URL.revokeObjectURL(url);
+        
+        toast({
+            title: "Success",
+            description: "Cover letter downloaded successfully!",
+        });
+
+    } catch (error) {
+        console.error('Error generating cover letter:', error)
+        toast({
+            title: "Error",
+            description: "Failed to generate cover letter. Please try again later.",
+            variant: "destructive",
+        })
+    }
+}
 
   if (loading) {
     return (
@@ -100,7 +133,7 @@ export function JobList() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {jobs.map((job, index) => (
         <motion.div
-          key={index}
+          key={job.id}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: index * 0.1 }}
@@ -172,7 +205,7 @@ export function JobList() {
                 </div>
               </div>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="relative z-20">
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -181,6 +214,15 @@ export function JobList() {
               >
                 <span>Apply</span>
                 <ExternalLink className="h-4 w-4" />
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition-all duration-300 flex items-center justify-center space-x-2 mt-2"
+                onClick={() => handleGenerateCoverLetter(job.id)}
+              >
+                <span>Generate Cover Letter</span>
               </motion.button>
             </CardFooter>
 
@@ -191,7 +233,7 @@ export function JobList() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute inset-0 bg-[#080b14]/95 p-6 rounded-lg"
+                  className="absolute top-0 left-0 right-0 bottom-16 bg-[#080b14]/95 p-6 rounded-lg z-10"
                 >
                   <div className="h-full flex flex-col">
                     <h4 className="text-lg font-medium text-gray-200 mb-4">Job Description</h4>

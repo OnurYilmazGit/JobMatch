@@ -11,6 +11,14 @@ import json
 from pdfminer.high_level import extract_text
 from dotenv import load_dotenv
 from fastapi.middleware.cors import CORSMiddleware
+import uuid
+import io
+from fastapi.responses import StreamingResponse
+from docx import Document
+from docx.shared import Pt, Inches
+
+# New imports for Groq
+from groq import Groq
 
 # Load environment variables from .env file
 load_dotenv()
@@ -119,14 +127,14 @@ def extract_skills_concurrently(job_descriptions):
 
 # Input and output models
 class JobMatch(BaseModel):
+    id: str
     positionName: str
     company: str
-    matchScore: int
+    matchScore: float
     matchedSkills: List[str]
     missingSkills: List[str]
-    url: str
-    postedAt: str
     description: str
+    url: str
 
 # Function to get a new access token
 def get_access_token():
@@ -170,14 +178,17 @@ async def upload_cv():
     # Print the extracted text for verification
     print("Extracted Text from CV:")
     print(content)
+    global cv_info
+    cv_info = content
+    
     
     token = token_pool[0] if token_pool else get_access_token()
     api_response = extract_skills_from_document_with_token(content, token)
     cv_data["skills"] = extract_skill_names(api_response) if api_response else []
     return {"message": "CV uploaded and skills extracted.", "skills": cv_data["skills"]}
 
-@app.get("/match-jobs/")
-async def match_jobs():
+@app.get("/match-jobs/", response_model=List[JobMatch])
+async def get_matched_jobs():
     if not jobs_data or not cv_data:
         raise HTTPException(status_code=400, detail="Jobs or CV data not uploaded.")
 
@@ -196,14 +207,14 @@ async def match_jobs():
         job_url = job.get("externalApplyLink") or job.get("url")
 
         results.append(JobMatch(
+            id=job["id"],
             positionName=job["positionName"],
             company=job["company"],
             matchScore=match_score,
             matchedSkills=list(matched_skills),
             missingSkills=list(missing_skills),
-            url=job_url,
-            postedAt=job["postedAt"],
-            description=job["description"]
+            description=job["description"],
+            url=job_url
         ))
 
     results.sort(key=lambda x: x.matchScore, reverse=True)
@@ -213,8 +224,136 @@ async def match_jobs():
 
     return results
 
+# New Endpoint: Generate Cover Letter
+@app.post("/generate-cover-letter/")
+async def generate_cover_letter(job_id: str):
+    # Retrieve the job data based on job_id
+    job = next((job for job in jobs_data if job.get("id") == job_id), None)
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found.")
+
+    # Ensure CV data is available
+    if not cv_data.get("skills"):
+        raise HTTPException(status_code=400, detail="CV data not uploaded.")
+
+    # Initialize Groq client
+    groq_client = Groq(
+        api_key=os.getenv("GROQ_API_KEY")
+    )
+
+        # Start of Selection
+        # Prepare the prompt for Groq API
+    prompt = f"""
+    You are a professional career consultant and expert copywriter. You will craft a concise, powerful, and personalized cover letter for the candidate, Onur YILMAZ, applying for the following role:
+
+
+    **Job Description:**
+    {job}
+
+    **Candidate's CV:**
+    {cv_info}
+    
+    
+    **Instructions/Constraints:**
+    1. The final cover letter must fit on a single page when rendered in Times New Roman, 12-point font, with normal margins.
+    2. Use ONLY the candidate's CV information, the provided job description, and the sample letter below as style inspiration. 
+    3. Do NOT request any additional details from the user.
+    4. Highlight how the candidate’s experience and skills match the job requirements.
+    5. The tone should be professional and enthusiastic without being overly lengthy or repetitive.
+    6. Ensure correct grammar, spelling, and punctuation.
+    7. Output only the final cover letter text (no placeholders or extra instructions).
+
+    **Sample Letter for Style Reference:**
+    Dear Hiring Manager,
+    My name is Onur Yılmaz, and I recently completed my Master’s in Informatics at the Technical University of Munich. I was very pleased to see the Cloud Solutions Architect position announced by the Max Planck Computing and Data Facility. I believe that both my academic and professional experiences align directly with the responsibilities and desired qualifications outlined in your job description.
+
+    Academic Background and High-Performance Computing (HPC) Experience
+    I completed my master thesis on the SuperMUC (HPC) at TUM, where I developed an ML-based dataset compression method for high-dimensional datasets, achieving a 250-fold reduction in data size. In addition, I successfully completed master-level courses such as Cloud Information Systems, Cloud Computing, and Cloud-Based Data Processing, which have given me a strong foundation in cloud technologies.
+
+    Experience at Intel and Giant Swarm
+    Intel (1.5 years): I developed an automation and test monitoring interface that consolidated the results of hundreds of daily CI/CD projects into a single Grafana dashboard, reducing analysis time from one hour to just five minutes. Throughout this process, I gained extensive experience with Docker, Python, Jenkins, Ansible, and Grafana on Linux-based systems.
+
+    Giant Swarm (8-month internship): My work focused on Kubernetes-based cluster management, improving the scalability and reliability of Azure clusters. I also developed automation policies to optimize cloud resource utilization.
+
+    Why MPCDF?
+    MPCDF’s OpenStack cloud infrastructure and its projects involving high-performance computing are a perfect match for my thesis research and corporate experience. I am eager to help further develop your existing cloud environment, propose new solutions, and support data-intensive projects across the Max Planck Institutes. In particular, my background in Infrastructure as Code (Terraform, Ansible) and container orchestration (Docker, Kubernetes) closely corresponds to your requirements.
+
+    Personal Motivation and Next Steps
+    Beyond my technical background, I have been a jazz drummer for over seven years, an experience that has honed my creativity, collaboration skills, and attention to detail, qualities I bring to every project I undertake. Joining MPCDF would allow me to merge my passion for innovative problem-solving with the opportunity to contribute to research-driven initiatives that support groundbreaking scientific discovery.
+
+    I would be delighted to discuss my experience further and explore how my skills align with MPCDF’s goals. Thank you for considering my application. I look forward to the possibility of contributing to your team and advancing MPCDF’s impactful projects.
+
+    Sincerely,
+    Onur Yılmaz
+
+
+    Now, please draft a final cover letter (one-page maximum) that highlights how the candidate’s background matches this job’s requirements. Use a similar style and structure to the sample letter but tailor it to the specifics of the above job description and the candidate’s CV. 
+    """
+
+
+    try:
+        # Perform chat completion using Groq API
+        chat_completion = groq_client.chat.completions.create(
+            messages=[
+                {"role": "user", "content": prompt}
+            ],
+            model="llama-3.3-70b-specdec",
+            max_tokens=500,
+            temperature=0.7,
+            top_p=0.9,
+            frequency_penalty=0.2,
+            presence_penalty=0.1
+        )
+
+        cover_letter = chat_completion.choices[0].message.content.strip()
+
+        if not cover_letter:
+            raise HTTPException(status_code=500, detail="Cover letter generation failed.")
+
+        # Create a DOCX file in-memory
+        document = Document()
+        
+        # Set the default font and size
+        style = document.styles['Normal']
+        font = style.font
+        font.name = 'Times New Roman'
+        font.size = Pt(12)
+
+        # Add the cover letter content
+        document.add_paragraph(cover_letter)
+
+        # Set the margins
+        sections = document.sections
+        for section in sections:
+            section.top_margin = Inches(1.15)
+            section.bottom_margin = Inches(1.15)
+            section.left_margin = Inches(1.15)
+            section.right_margin = Inches(1.15)
+
+        # Save the document to a BytesIO stream
+        docx_stream = io.BytesIO()
+        document.save(docx_stream)
+        docx_stream.seek(0)
+
+        # Prepare the response headers with the company name in the filename
+        company_name = job.get('company', 'Company').replace(' ', '_')
+        filename = f"Cover_Letter_{company_name}.docx"
+        headers = {
+            'Content-Disposition': f'attachment; filename="{filename}"'
+        }
+
+        return StreamingResponse(
+            docx_stream,
+            media_type='application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            headers=headers
+        )
+
+    except Exception as e:
+        logging.error(f"Groq API Error for job_id {job_id}: {e}")
+        raise HTTPException(status_code=500, detail="Failed to generate cover letter.")
+
 # Run the app for testing
 if __name__ == "__main__":
-    populate_tokens(pool_size=2)  # Generate a pool of 5 tokens
+    populate_tokens(pool_size=2)  # Generate a pool of 2 tokens
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
