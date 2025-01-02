@@ -153,17 +153,43 @@ def get_access_token():
         logging.error("Failed to generate token")
         return None
 
+def standardize_jobs(jobs):
+    standardized_jobs = []
+    for job in jobs:
+        standardized_jobs.append({
+            "id": job.get("job_id", job.get("id")),
+            "positionName": job.get("job_title", job.get("positionName")),
+            "company": job.get("company_name", job.get("company")),
+            "location": job.get("job_location", {}).get("city", job.get("location")),
+            "description": job.get("job_description", job.get("description")),
+            "url": job.get("job_url", job.get("url")),
+            "postedAt": job.get("job_posted_date", job.get("postedAt")),
+            "scrapedAt": job.get("scrapedAt"),  # This key doesn't appear in the new JSON, handle as needed.
+        })
+    return standardized_jobs
+
+
+
 @app.post("/upload-jobs/")
 async def upload_jobs():
     global jobs_data
     jobs_data = []
     if not os.path.exists(JOBS_DIR):
         raise HTTPException(status_code=404, detail=f"Directory {JOBS_DIR} not found.")
+    
     for file_name in os.listdir(JOBS_DIR):
         file_path = os.path.join(JOBS_DIR, file_name)
-        with open(file_path, "r") as file:
-            jobs_data.extend(json.load(file))
-    return {"message": f"{len(jobs_data)} jobs uploaded from {JOBS_DIR}."}
+        try:
+            with open(file_path, "r", encoding="utf-8") as file:
+                raw_jobs = json.load(file)
+                standardized_jobs = standardize_jobs(raw_jobs)
+                jobs_data.extend(standardized_jobs)
+        except Exception as e:
+            logging.error(f"Error loading or standardizing file {file_name}: {e}")
+            continue
+
+    return {"message": f"{len(jobs_data)} jobs uploaded and standardized from {JOBS_DIR}."}
+
 
 @app.post("/upload-cv/")
 async def upload_cv():
@@ -354,6 +380,6 @@ async def generate_cover_letter(job_id: str):
 
 # Run the app for testing
 if __name__ == "__main__":
-    populate_tokens(pool_size=2)  # Generate a pool of 2 tokens
+    populate_tokens(pool_size=3)  # Generate a pool of 2 tokens
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
